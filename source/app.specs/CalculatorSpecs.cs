@@ -20,6 +20,7 @@ namespace app.specs
         connection = depends.on<IDbConnection>();   
       };
 
+      Because b = () => sut.add(1, 2);
 
       It should_open_a_connection_To_the_db = () =>
         connection.received(x => x.Open());
